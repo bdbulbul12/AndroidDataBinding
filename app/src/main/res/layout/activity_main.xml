@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <import type="com.programmerhuntbd.bulbul.databinding.Player"></import>
+
+        <variable
+            name="player"
+            type="Player">
+
+        </variable>
+    </data>
+    
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.programmerhuntbd.bulbul.databinding.MainActivity">
+
+        <EditText
+            android:id="@+id/firstName"
+            android:hint="Enter First Name"
+            android:text="@={player.firstName}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/lastName"
+            android:hint="Enter last Name"
+            android:text="@={player.lastName}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn"
+            android:text="Click Here"
+            android:layout_marginTop="10dp"
+            android:textSize="24dp"
+            android:onClick="savePlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{player.firstName}"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{player.lastName}"
+
+            />
+
+    </LinearLayout>
+</layout>
+
